@@ -474,20 +474,16 @@ ltoken: token de acesso da api
 
 # Matriculas
  
- ## Adicionar Curso
+ ## Adicionar Matricula
  
- URl: http://34.73.203.137/user/insert
+ URl: http://34.73.203.137/registration/insert
  
  
  Parametros: 
  
- "title": titulo do curso
+ "course": token do curso
  
- "description": descricao do curso
- 
- "datestart": data inicio do curso
- 
- "dateend": data termino do curso
+ "student": token do aluno
  
  "ltoken": token de acesso a api
  
@@ -496,21 +492,21 @@ ltoken: token de acesso da api
  
 {
 
-  "msg": mensagem se o curso foi cadastrado
+  "msg": "Matricula cadastrada com sucesso",
   
-  "status": statusonfirmacao de cadastro
+  "status": "true"
   
 }
  
  
- ## Obter Curso
+ ## Obter Matricula
  
-   URl: http://34.73.203.137/course/get
+   URl: http://34.73.203.137/registration/get
 
 
  Parametros: 
  
- "token": token do curso
+ "token": token da matricula
  
  "ltoken": token de acesso a api
  
@@ -518,31 +514,72 @@ ltoken: token de acesso da api
  Retorno:
  
 {
-  "course": {
+
+  "registration": 
+  {
   
-    "cour_id": "6",
+    "regi_id": "23",
     
-    "cour_title": "matematica",
+    "regi_stud_id": "5",
     
-    "cour_description": "curso matematica",
+    "regi_cour_id": "7",
     
-    "cour_date_start": "2022-10-10",
+    "regi_user_id": "9",
     
-    "cour_date_end": "2022-11-10",
+    "regi_date": "2022-03-13",
     
-    "cour_token": "7a93f6ff70eaf9abf0c8f7f4729d1c76"
+    "regi_token": "c8d6b50f17bcc1d8985c715e3daddfe5",
+    
+    "user_id": "9",
+    
+    "user_name": "Admin",
+    
+    "user_mail": "admin@match.mt",
+    
+    "user_status": "1",
+    
+    "user_token": "FtTz3yJ9gdSDrT-J2EE3Mgt4ykVUKkRCiBLx9rg625E",
+    
+    "user_password": "81dc9bdb52d04dc20036dbd8313ed055",
+    
+    "user_token_access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+    
+    "stud_id": "5",
+    
+    "stud_name": "thiago",
+    
+    "stud_mail": "thiago bellandi",
+    
+    "stud_birthday": "1981-10-27",
+    
+    "stud_status": "1",
+    
+    "stud_token": "75c9920a9e28b3013da9447c4daba24d",
+    
+    "cour_id": "7",
+    
+    "cour_title": "matematica2222",
+    
+    "cour_description": "curso de matematica",
+    
+    "cour_date_start": "2022-12-10",
+    
+    "cour_date_end": "2022-12-30",
+    
+    "cour_token": "03b5e555807ae5e9b5176cc5e97767dd"
     
   },
   
   "msg": "",
   
   "status": "true"
+  
 }
     
     
-  ## Listar Cursos
+  ## Listar Matriculas
   
-   URl: http://34.73.203.137/course/getall
+   URl: http://34.73.203.137/registration/getall
  
  
  Parametros: 
@@ -553,34 +590,77 @@ ltoken: token de acesso da api
  Retorno:
  
 {
-  "courses": [
+
+  "registrations": [
+  
     {
     
-      "cour_id": "6",
+      "regi_id": "23",
       
-      "cour_title": "matematica",
+      "regi_stud_id": "5",
       
-      "cour_description": "cursomatematica",
+      "regi_cour_id": "7",
       
-      "cour_date_start": "2022-10-10",
+      "regi_user_id": "9",
       
-      "cour_date_end": "2022-11-10",
+      "regi_date": "2022-03-13",
       
-      "cour_token": "7a93f6ff70eaf9abf0c8f7f4729d1c76"
+      "regi_token": "c8d6b50f17bcc1d8985c715e3daddfe5",
+      
+      "user_id": "9",
+      
+      "user_name": "Admin",
+      
+      "user_mail": "admin@match.mt",
+      
+      "user_status": "1",
+      
+      "user_token": "FtTz3yJ9gdSDrT-J2EE3Mgt4ykVUKkRCiBLx9rg625E",
+      
+      "user_password": "81dc9bdb52d04dc20036dbd8313ed055",
+      
+      "user_token_access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+      
+      "stud_id": "5",
+      
+      "stud_name": "thiago",
+      
+      "stud_mail": "thiago bellandi",
+      
+      "stud_birthday": "1981-10-27",
+      
+      "stud_status": "1",
+      
+      "stud_token": "75c9920a9e28b3013da9447c4daba24d",
+      
+      "cour_id": "7",
+      
+      "cour_title": "matematica2222",
+      
+      "cour_description": "curso de matematica",
+      
+      "cour_date_start": "2022-12-10",
+      
+      "cour_date_end": "2022-12-30",
+      
+      "cour_token": "03b5e555807ae5e9b5176cc5e97767dd"
+      
       
     }
+    
   ]
+  
 }
 
 
-## Excluir Curso
+## Excluir Matricula
  
- URl: http://34.73.203.137/course/delete
+ URl: http://34.73.203.137/registration/delete
  
  
  Parametros: 
  
- "token": token do curso
+ "token": token da matricula
  
  "ltoken": token de acesso a api
  
@@ -588,16 +668,18 @@ ltoken: token de acesso da api
  Retorno:
  
 {
-  "msg": "Curso excluido"
+
+  "msg": "Matrícula excluida",
   
   "status": "true"
+  
 }
  
  
  
-  ## Editar Curso
+  ## Editar Matricula
   
- URl: http://34.73.203.137/course/edit
+ URl: http://34.73.203.137/registration/edit
  
  
  Parametros: 
