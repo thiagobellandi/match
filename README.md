@@ -22,7 +22,7 @@
  
  # Usuários
  
- Para criar novos usuários:
+ *Para criar novos usuários:*
  
  URl: http://34.73.203.137/user/insert
  
@@ -31,4 +31,9 @@
  "mail": email do usuario
  "status": status da conta. 0 desativado e 1 para ativado
  "password": senha do usuario
+ 
+ Retorno:
+ "erro": true or false
+ "msg": mesagem se o cadastro foi efetuado ou não
+ 
  
