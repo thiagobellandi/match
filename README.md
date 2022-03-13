@@ -1,5 +1,8 @@
 # SISTEMA MATRÍCULA
  
+ O arquivo sql está na pasta raiz do projeto. Banco de dados utilizado foi o MySql
+ Arquivo: matricula-sql.zip
+ 
  Sistema de Gestão de Cursos e Matrículas
  
  Todos os parametros devem ser passado pela url dentro da variavel "param":
