@@ -169,67 +169,75 @@
 
  # CURSOS
  
- *NOVOS USUÁRIOS:*
+ ## Adicionar Curso
  
  URl: http://34.73.203.137/user/insert
  
  
  Parametros: 
  
- "name": nome do usuario
+ "title": titulo do curso
  
- "mail": email do usuario
+ "description": descricao do curso
  
- "status": status da conta. 0 desativado e 1 para ativado
+ "datestart": data inicio do curso
  
- "password": senha do usuario
- 
- "ltoken": token de acesso a api
- 
- 
- Retorno:
- 
- "erro": true or false
- 
- "msg": mesagem se o cadastro foi efetuado ou não
- 
- 
- *EXIBIR USUÁRIO:*
- 
-   URl: http://34.73.203.137/user/get
-
-
- Parametros: 
- 
- "token": token do usuario
+ "dateend": data termino do curso
  
  "ltoken": token de acesso a api
  
  
  Retorno:
  
- "users": lista de usuarios
- 
-    {
-    
-      "user_id": id do usuario,
-      
-      "user_name": nome do usuario,
-      
-      "user_mail": email do usuario,
-      
-      "user_status": satus do usuario,
-      
-      "user_token": token do usuario,
-      
-      "user_password": senha do usuario criptografada
-      
-    }
-    
-    
-  *LISTAR USUÁRIOS:*
+{
+
+  "msg": mensagem se o curso foi cadastrado
   
-   URl: http://34.73.203.137/user/getall
+  "status": statusonfirmacao de cadastro
+  
+}
+ 
+ 
+ ## Obter Curso
+ 
+   URl: http://34.73.203.137/course/get
+
+
+ Parametros: 
+ 
+ "token": token do curso
+ 
+ "ltoken": token de acesso a api
+ 
+ 
+ Retorno:
+ 
+{
+  "course": {
+  
+    "cour_id": "6",
+    
+    "cour_title": "matematica",
+    
+    "cour_description": "curso matematica",
+    
+    "cour_date_start": "2022-10-10",
+    
+    "cour_date_end": "2022-11-10",
+    
+    "cour_token": "7a93f6ff70eaf9abf0c8f7f4729d1c76"
+    
+  },
+  
+  "msg": "",
+  
+  "status": "true"
+}
+    
+    
+  ## Listar Cursos
+  
+   URl: http://34.73.203.137/course/getall
  
  
  Parametros: 
@@ -239,28 +247,23 @@
  
  Retorno:
  
- "users": lista de usuarios
- 
+{
+  "courses": [
     {
-    
-      "user_id": id do usuario,
-      
-      "user_name": nome do usuario,
-      
-      "user_mail": email do usuario,
-      
-      "user_status": satus do usuario,
-      
-      "user_token": token do usuario,
-      
-      "user_password": senha do usuario criptografada
-      
+      "cour_id": "6",
+      "cour_title": "matematica",
+      "cour_description": "cursomatematica",
+      "cour_date_start": "2022-10-10",
+      "cour_date_end": "2022-11-10",
+      "cour_token": "7a93f6ff70eaf9abf0c8f7f4729d1c76"
     }
+  ]
+}
 
 
- *EXCLUIR USUÁRIO:*
+## Excluir Curso
  
- URl: http://34.73.203.137/user/delete
+ URl: http://34.73.203.137/course/delete
  
  
  Parametros: 
@@ -275,6 +278,7 @@
  "erro": true or false
  
  "msg": mesagem se ousuario foi excluido ou nao
+ 
  
  
   *EDITAR USUÁRIO:*
