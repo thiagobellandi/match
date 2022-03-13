@@ -684,24 +684,22 @@ ltoken: token de acesso da api
  
  Parametros: 
  
- "title": titulo do curso
+ "course": token do curso
  
- "description": descricao do curso
+ "student": token do aluno
  
- "datestart": data inicio do curso
- 
- "dateend": data termino do curso
+ "token": token da matricula
  
  "ltoken": token de acesso a api
- 
  
  
  Retorno:
  
 {
-  "msg": "Os dados do curso foram editados",
+
+  "msg": "Matricula editada com sucesso",
   
   "status": "true"
+  
 }
- 
 
