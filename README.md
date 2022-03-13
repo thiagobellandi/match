@@ -1,8 +1,8 @@
-# Sistema Matricula
+# SISTEMA MATRÍCULA
  
  Sistema de Gestão de Cursos e Matrículas
  
-# Login
+# LOGIN
  
  [Realizar o login com o usuário padrão para obter o token de acesso:]
  
@@ -29,9 +29,9 @@
  "token": token a ser utilizado para acessar as outras funcionalidades da api
  
  
- # Usuários
+ # USUÁRIOS
  
- ## NOVOS USUÁRIOS
+ ## Novos Usuários
  
  URl: http://34.73.203.137/user/insert
  
@@ -56,7 +56,7 @@
  "msg": mesagem se o cadastro foi efetuado ou não
  
  
- ## EXIBIR USUÁRIO
+ ## Exibir usuário
  
    URl: http://34.73.203.137/user/get
  
@@ -90,7 +90,7 @@
     
     
   
-  ## LISTAR USUÁRIOS
+  ## Listar Usuários
   
    URl: http://34.73.203.137/user/getall
  
@@ -121,7 +121,7 @@
     }
 
 
- ## EXCLUIR USUÁRIO
+ ## Excluir Usuário
  
  URl: http://34.73.203.137/user/delete
  
@@ -140,7 +140,7 @@
  "msg": mesagem se ousuario foi excluido ou nao
  
  
-  ## EDITAR USUÁRIO
+  ## Editar Usuário
  
  URl: http://34.73.203.137/user/edit
  
@@ -167,7 +167,7 @@
  "msg": mesagem se o usuario foi editado ou não
  
 
- # Cursos
+ # CURSOS
  
  *NOVOS USUÁRIOS:*
  
