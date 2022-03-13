@@ -22,8 +22,8 @@ class JwtGenerate
     }
 
     //
-    public function decodeJwt($token): object
+    public function decodeJwt($token): array
     {
-        return \Firebase\JWT\JWT::decode($token, new Key($this->_key, 'HS256'));
+        return (array) \Firebase\JWT\JWT::decode($token, new Key($this->_key, 'HS256'));
     }
 }

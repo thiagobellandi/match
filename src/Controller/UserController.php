@@ -60,12 +60,6 @@ class UserController extends BaseIni
         //
         $this->BaseUser();
 
-        $j = $this->getValue('jwt');
-        print_r($this->_jwt->decodeJwt($j));
-
-        exit;
-
-
         //get the list of users in database
         $result = $this->_userDb->getUsers();
         $users= array();

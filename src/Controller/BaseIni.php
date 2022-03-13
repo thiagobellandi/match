@@ -65,12 +65,11 @@ class BaseIni
         }
 
         //check access permission
-        /*
         if (!$this->_loginDb->checkLoginToken($this->getValue('ltoken')))
         {
             //
             $reply['erro'] = "true";
-            $reply['msg'] = "Acesso não permitido. Token de login não informádo ou inválido";
+            $reply['msg'] = "Acesso não permitido. Token de login não informado ou inválido";
 
             //
             $jwt = $this->_jwt->encodeJwt($reply);
@@ -79,7 +78,6 @@ class BaseIni
 
             exit;
         }
-        */
     }
 
     //
@@ -150,9 +148,22 @@ class BaseIni
     //
     public function getValue($value)
     {
-        if (isset($_GET[$value]))
+        //
+        if (!isset($_GET['param']))
         {
-            return $_GET[$value];
+            $reply['erro'] = "true";
+            $reply['msg'] = "variavel param não informada";
+
+            return "";
+        }
+
+        $param = $_GET['param'];
+        $array = $this->_jwt->decodeJwt($param);
+
+        //
+        if (isset($array[$value]))
+        {
+            return $array[$value];
         }
 
         return "";
