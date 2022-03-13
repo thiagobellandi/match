@@ -31,7 +31,7 @@
  
  # Usuários
  
- ##NOVOS USUÁRIOS
+ ## NOVOS USUÁRIOS
  
  URl: http://34.73.203.137/user/insert
  
@@ -56,7 +56,7 @@
  "msg": mesagem se o cadastro foi efetuado ou não
  
  
- ##EXIBIR USUÁRIO
+ ## EXIBIR USUÁRIO
  
    URl: http://34.73.203.137/user/get
  
@@ -90,7 +90,7 @@
     
     
   
-  ##LISTAR USUÁRIOS
+  ## LISTAR USUÁRIOS
   
    URl: http://34.73.203.137/user/getall
  
@@ -121,7 +121,7 @@
     }
 
 
- ##EXCLUIR USUÁRIO
+ ## EXCLUIR USUÁRIO
  
  URl: http://34.73.203.137/user/delete
  
@@ -140,7 +140,7 @@
  "msg": mesagem se ousuario foi excluido ou nao
  
  
-  ##EDITAR USUÁRIO
+  ## EDITAR USUÁRIO
  
  URl: http://34.73.203.137/user/edit
  
