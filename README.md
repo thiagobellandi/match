@@ -2,6 +2,9 @@
  
  Sistema de Gestão de Cursos e Matrículas
  
+ Todas as respostas da api estão utilizando JWT: HS256 e a senha: @#4!#09$
+ 
+ 
 # LOGIN
  
  [Realizar o login com o usuário padrão para obter o token de acesso:]
