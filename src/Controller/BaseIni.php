@@ -65,6 +65,7 @@ class BaseIni
         }
 
         //check access permission
+        /*
         if (!$this->_loginDb->checkLoginToken($this->getValue('ltoken')))
         {
             //
@@ -78,6 +79,13 @@ class BaseIni
 
             exit;
         }
+        */
+    }
+
+    //
+    public function getUserId()
+    {
+        return $this->_userDb->getUserId($this->getValue('ltoken'));
     }
 
     //

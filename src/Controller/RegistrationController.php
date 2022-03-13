@@ -149,7 +149,7 @@ class RegistrationController extends BaseIni
         $student = $this->_studentDb->getStudent($this->getValue('student'));
 
         //
-        $userId = 1;
+        $userId = $this->getUserId();
 
         //
         $reply = $this->checkRegistrationPermissions($course, $student);

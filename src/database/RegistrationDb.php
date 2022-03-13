@@ -54,8 +54,9 @@ class RegistrationDb
         {
             $query = " INSERT INTO registration (regi_cour_id, regi_date, regi_stud_id, regi_user_id, regi_token) 
                                          VALUES 
-                                        ('$courseId', '$date', '$studentId', '$userId', '$tokenId') ";
-            $this->_baseDb->execQuery($query);
+                                        (?, ?, ?, ?, ?) ";
+            $result = $this->_baseDb->prepare($query);
+            $result->execute(array($courseId, $date, $studentId, $userId, $tokenId));
             if ($this->checkRegistration($courseId, $studentId))
             {
                 $this->_reply['msg'] = "Matricula cadastrada com sucesso";
@@ -83,7 +84,7 @@ class RegistrationDb
         if ($this->checkRegistrationToken($tokenId))
         {
             $query = " DELETE FROM registration WHERE regi_token = ? ";
-            $this->_baseDb->prepare($query);
+            $result = $this->_baseDb->prepare($query);
             $result->execute(array($tokenId));
 
             //Confirm if the registration was deleted

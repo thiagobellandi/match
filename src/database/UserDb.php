@@ -51,14 +51,15 @@ class UserDb
     {
         $this->UserDb();
         $tokenId = md5(uniqid(rand(), true));
+        $tokenAccessId = md5(uniqid(rand(), true));
         $password = md5($password);
         if (!$this->checkUserMail($mail))
         {
-            $query = " INSERT INTO user (user_name, user_mail, user_status, user_password, user_token) 
+            $query = " INSERT INTO user (user_name, user_mail, user_status, user_password, user_token, user_token_access) 
                                          VALUES 
-                                        (?, ?, ?, ?, ?) ";
+                                        (?, ?, ?, ?, ?, ?) ";
             $result = $this->_baseDb->prepare($query);
-            $result->execute(array($name, $mail, $status, $password, $tokenId));
+            $result->execute(array($name, $mail, $status, $password, $tokenId, $tokenAccessId));
             if ($this->checkUserMail($mail))
             {
                 $this->_reply['msg'] = "Usuário cadastrado com sucesso";
@@ -130,6 +131,20 @@ class UserDb
             return true;
         }
         return false;
+    }
+
+    //
+    public function getUserId($tokenAccessId)
+    {
+        $this->UserDb();
+        $query = " SELECT * FROM user WHERE user_token_access = ? ";
+        $result = $this->_baseDb->prepare($query);
+        $result->execute(array($tokenAccessId));
+        if ($row = $result->fetch(PDO::FETCH_ASSOC))
+        {
+            return $row['user_id'];
+        }
+        return 0;
     }
 
     //

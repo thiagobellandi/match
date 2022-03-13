@@ -57,7 +57,6 @@ class StudentDb
                                          VALUES 
                                         ('$name','$mail', '$birthday', '$status', '$tokenId') ";
             $this->_baseDb->execQuery($query);
-            echo $query;
             if ($this->checkStudentMail($mail))
             {
                 $this->_reply['msg'] = "Aluno cadastrado com sucesso";
@@ -86,7 +85,7 @@ class StudentDb
         if ($reply['status'] == "true")
         {
             $query = " DELETE FROM student WHERE stud_token = ? ";
-            $result = $this->_baseDb->preapre($query);
+            $result = $this->_baseDb->prepare($query);
             $result->execute(array($tokenId));
 
             //Confirm if the student was deleted
@@ -166,7 +165,7 @@ class StudentDb
     public function getStudent($tokenId)
     {
         $this->StudentDb();
-        $query = " SELECT * FROM student WHERE stud_token = / ";
+        $query = " SELECT * FROM student WHERE stud_token = ? ";
         $result = $this->_baseDb->prepare($query);
         $result->execute(array($tokenId));
         if ($row = $result->fetch(PDO::FETCH_ASSOC))

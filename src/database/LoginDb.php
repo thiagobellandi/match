@@ -33,7 +33,7 @@ class LoginDb
         $result->execute(array($login, $password));
         if ($row = $result->fetch(PDO::FETCH_ASSOC))
         {
-            return $row['user_token'];
+            return $row['user_token_access'];
         }
         return false;
     }
@@ -53,7 +53,7 @@ class LoginDb
         //
         $query = " SELECT * 
                         FROM user 
-                        WHERE user_token = ? ";
+                        WHERE user_token_access = ? ";
         $result = $this->_baseDb->prepare($query);
         $result->execute(array($token));
         if ($row = $result->fetch(PDO::FETCH_ASSOC))
