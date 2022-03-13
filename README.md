@@ -9,7 +9,7 @@
  
  EX: http://34.73.203.137/login/make?param=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbiI6ImFkbWluQG1hdGNoLm10IiwicGFzc3dvcmQiOiIxMjM0In0.aY9xYlCmvDmIf_ZVI8j3m3--q-jX9zuKLyFNQZYcXCc
  
- EX:http://34.73.203.137/course/insert?param=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6ImNpZW5jaWFzIiwiZGVzY3JpcHRpb24iOiJtYXRlcmlhIGRlIGNpZW5jaWFzIiwiZGF0ZXN0YXJ0IjoiMjAyMi0xMC0xMCIsImRhdGVlbmQiOiIyMDIyLTExLTEwIiwibHRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5In0.S_RkSY7nyfu55WkcjQBL80EWYR4u8qzO5KBvx8fRnsE 
+ EX: http://34.73.203.137/course/insert?param=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6ImNpZW5jaWFzIiwiZGVzY3JpcHRpb24iOiJtYXRlcmlhIGRlIGNpZW5jaWFzIiwiZGF0ZXN0YXJ0IjoiMjAyMi0xMC0xMCIsImRhdGVlbmQiOiIyMDIyLTExLTEwIiwibHRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5In0.S_RkSY7nyfu55WkcjQBL80EWYR4u8qzO5KBvx8fRnsE 
  
  
  Todas as respostas da api estão utilizando JWT: HS256 e a senha: @#4!#09$
