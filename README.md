@@ -250,12 +250,19 @@
 {
   "courses": [
     {
+    
       "cour_id": "6",
+      
       "cour_title": "matematica",
+      
       "cour_description": "cursomatematica",
+      
       "cour_date_start": "2022-10-10",
+      
       "cour_date_end": "2022-11-10",
+      
       "cour_token": "7a93f6ff70eaf9abf0c8f7f4729d1c76"
+      
     }
   ]
 }
@@ -268,42 +275,45 @@
  
  Parametros: 
  
- "token": token do usuario
+ "token": token do curso
  
  "ltoken": token de acesso a api
  
  
  Retorno:
  
- "erro": true or false
+{
+  "msg": "Curso excluido"
+  
+  "status": "true"
+}
  
- "msg": mesagem se ousuario foi excluido ou nao
  
  
- 
-  *EDITAR USUÁRIO:*
- 
- URl: http://34.73.203.137/user/edit
+  ## Editar Curso
+  
+ URl: http://34.73.203.137/course/edit
  
  
  Parametros: 
  
- "name": nome do usuario
+ "title": titulo do curso
  
- "mail": email do usuario
+ "description": descricao do curso
  
- "status": status da conta. 0 desativado e 1 para ativado
+ "datestart": data inicio do curso
  
- "password": senha do usuario
- 
- "token": token do usuario
+ "dateend": data termino do curso
  
  "ltoken": token de acesso a api
  
  
+ 
  Retorno:
  
- "erro": true or false
- 
- "msg": mesagem se o usuario foi editado ou não
+{
+  "msg": "Os dados do curso foram editados",
+  
+  "status": "true"
+}
  
