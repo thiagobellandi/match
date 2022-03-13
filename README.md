@@ -12,11 +12,13 @@
  
  Senha: 1234
 
+
  Parametros: 
  
  "login"
  
  "password"
+ 
  
  Retorno:
  
@@ -33,6 +35,7 @@
  
  URl: http://34.73.203.137/user/insert
  
+ 
  Parametros: 
  
  "name": nome do usuario
@@ -45,6 +48,7 @@
  
  "ltoken": token de acesso a api
  
+ 
  Retorno:
  
  "erro": true or false
@@ -56,11 +60,13 @@
  
    URl: http://34.73.203.137/user/get
  
+ 
  Parametros: 
  
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -87,9 +93,11 @@
   
    URl: http://34.73.203.137/user/getall
  
+ 
  Parametros: 
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -116,11 +124,13 @@
  
  URl: http://34.73.203.137/user/delete
  
+ 
  Parametros: 
  
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -132,6 +142,7 @@
   *EDITAR USUÁRIO:*
  
  URl: http://34.73.203.137/user/edit
+ 
  
  Parametros: 
  
@@ -146,6 +157,7 @@
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -160,6 +172,7 @@
  
  URl: http://34.73.203.137/user/insert
  
+ 
  Parametros: 
  
  "name": nome do usuario
@@ -172,6 +185,7 @@
  
  "ltoken": token de acesso a api
  
+ 
  Retorno:
  
  "erro": true or false
@@ -182,12 +196,14 @@
  *EXIBIR USUÁRIO:*
  
    URl: http://34.73.203.137/user/get
- 
+
+
  Parametros: 
  
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -214,9 +230,11 @@
   
    URl: http://34.73.203.137/user/getall
  
+ 
  Parametros: 
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -243,11 +261,13 @@
  
  URl: http://34.73.203.137/user/delete
  
+ 
  Parametros: 
  
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
@@ -259,6 +279,7 @@
   *EDITAR USUÁRIO:*
  
  URl: http://34.73.203.137/user/edit
+ 
  
  Parametros: 
  
@@ -273,6 +294,7 @@
  "token": token do usuario
  
  "ltoken": token de acesso a api
+ 
  
  Retorno:
  
